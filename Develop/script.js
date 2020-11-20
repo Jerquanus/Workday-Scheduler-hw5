@@ -1,12 +1,46 @@
+var timeDisplay = $('#currentDay')
+
+function currentTime() {
+    var today = moment();
+    timeDisplay.text(today.format('MMM DD, YYYY [at] hh:mm:ss a'));
+    var timeRightNow = today.hours()
+
+    console.log
+
+    for(var i = 9; i <= 17; i++) {
+        var hourEl = document.getElementById(i.toString());
+        var id = parseInt(hourEl.id)
+
+        // hourEl.classList.add('past')
+
+        // less than, equal to or greater than
+        if(id < timeRightNow) {
+            hourEl.classList.add('past')
+        }
+    
+        
+        // console.log(id,timeRightNow)
+        
+    }
 
 
-var today = moment().format('dddd, MMMM Do YYYY, h:mm:ss a')
-let todayTwo = $('#currentDay').text(today)
-console.log('today ', today)
-console.log('todayTwo ', todayTwo)
+}
 
 
-// var save = 
+
+
+
+
+currentTime()
+
+
+
+
+
+
+
+
+
 
 // localStorage.setItem();
 
